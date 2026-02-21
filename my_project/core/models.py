@@ -30,3 +30,9 @@ class mother(models.Model):
     email = models.EmailField()
     age = models.IntegerField()
     address = models.CharField(max_length=200, blank=True)
+class father(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    age = models.IntegerField()
+    address = models.CharField(max_length=200, blank=True)
