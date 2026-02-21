@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Django Project</title>
+  </head>
+  <body>
+    <div
+      class="form-container"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      "
+    >
+      <form
+        method="POST"
+        class=""
+        style="
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      >
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter Email" />
+        <br />
+        <label for="address">Address:</label>
+        <textarea name="address" placeholder="Enter Address"></textarea>
+
+        <button type="submit">Save</button>
+      </form>
+    </div>
+    <a href="{% url 'home' %}">back</a>
+  </body>
+</html>

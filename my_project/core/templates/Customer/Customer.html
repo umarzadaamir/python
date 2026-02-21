@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Customer Information</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="Enter Name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Enter Email" required />
+      <br />
+      <label for="age">Age:</label>
+      <input type="number" name="age" placeholder="Enter Age" required />
+      <br />
+      <label for="address">Address:</label>
+      <textarea name="address" placeholder="Enter Address"></textarea>
+      <br />
+      <label for="salary">Salary:</label>
+      <input
+        type="number"
+        step="0.01"
+        name="salary"
+        placeholder="Enter Salary"
+      />
+      <br />
+      <label for="cinc">CINC:</label>
+      <input type="text" name="cinc" placeholder="Enter CINC" />
+      <br />
+      <button type="submit">Save</button>
+    </form>
+    <br />
+    <br />
+    <table style="border: 10px solid black">
+      <tr style="border: 2px solid black">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Salary</th>
+        <th>CINC</th>
+        <th>delete</th>
+        <th>view</th>
+      </tr>
+        {% for customer in Customeer %}
+          <tr style="border: 1px solid black">
+        <td >{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.age}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.salary}}</td>
+        <td>{{customer.cinc}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+  </body>
+</html>

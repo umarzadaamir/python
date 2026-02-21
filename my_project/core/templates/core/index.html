@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Django Project</title>
+  </head>
+  <body>
+    <h1>umar zada amir!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio ab debitis
+      eius facere animi sed cum fugiat quae inventore nisi odit temporibus, quam
+      quis soluta voluptatibus libero. Commodi, labore perspiciatis.
+    </p>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="Enter Name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Enter Email" />
+      <br />
+      <label for="address">age:</label>
+      <input type="number" name="age" placeholder="Enter Age" />
+      <br />
+      <label for="address">Address:</label>
+      <textarea name="address" placeholder="Enter Address"></textarea>
+      <br />
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
