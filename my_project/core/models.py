@@ -24,3 +24,9 @@ class Customer(models.Model):
     address = models.CharField(max_length=200, blank=True)
     salary = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     cinc = models.CharField(max_length=20, null=True, blank=True)
+class mother(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    age = models.IntegerField()
+    address = models.CharField(max_length=200, blank=True)
